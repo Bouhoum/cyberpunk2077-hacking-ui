@@ -1,10 +1,19 @@
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
+const Colorkraken = require ('colorkraken');
 
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    extend: {
+      colors: Colorkraken,
+      textColors: Colorkraken,
+      backgroundColors: Colorkraken,
+      fontFamily: {
+          body: ["Roboto Condensed"],
+      },
+    },
     screens: {
       sm: '640px',
       md: '768px',
